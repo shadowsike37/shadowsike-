@@ -38,11 +38,11 @@ def install_requirements():
 install_requirements()
 
 # 🎛️ Telegram API token (replace with your actual token)
-TOKEN = '7424479555:AAGtNAbqXax_b3b--QnGYi5_XwBbQNw'
+TOKEN = '7701955677:AAGRf5kEtSMHKs41gpN9OHSYQ-TSx57I5iw'
 bot = telebot.TeleBot(TOKEN, threaded=False)
 
 # 🛡️ List of authorized user IDs (replace with actual IDs)
-AUTHORIZED_USERS = [5588464519]
+AUTHORIZED_USERS = [6136852448]
 
 # 🌐 Global dictionary to keep track of user attacks
 user_attacks = {}
@@ -112,7 +112,7 @@ def start(message):
     user_id = message.from_user.id
     log_command(user_id, '/start')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @venomXcrazy")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @Obito_uchiha_2507")
     else:
         welcome_message = (
             "🎮 **Welcome to the Ultimate Attack Bot!** 🚀\n\n"
@@ -141,7 +141,7 @@ def attack(message):
     user_id = message.from_user.id
     log_command(user_id, '/attack')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @venomXcrazy")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @Obito_uchiha_2507")
         return
 
     # Parse target IP and port from the command ︵‿︵‿︵‿︵ ⋆.˚🦋༘⋆
@@ -182,7 +182,7 @@ def stop(message):
     user_id = message.from_user.id
     log_command(user_id, '/stop')
     if user_id not in AUTHORIZED_USERS:
-        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @venomXcrazy")
+        bot.send_message(message.chat.id, "🚫 Access Denied! Contact the owner for assistance: @Obito_uchiha_2507")
         return
 
     stop_attack(user_id)
@@ -199,7 +199,7 @@ def show_id(message):
                                       f"👥 Your Username is: @{username}")
 
     # 👑 Printing the bot owner's username ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆
-    bot_owner = "venomXcrazy"  # 👑 The bot owner's username  ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆
+    bot_owner = "@Obito_uchiha_2507"  # 👑 The bot owner's username  ⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆⋆｡ﾟ☁︎｡⋆｡ ﾟ☾ ﾟ｡⋆
     bot.send_message(message.chat.id, f"🤖 This bot is owned by: @{bot_owner}")
 
 # 💬 Command handler for /rules. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁
@@ -225,7 +225,7 @@ def rules(message):
 @bot.message_handler(commands=['owner'])
 def owner(message):
     log_command(message.from_user.id, '/owner')
-    bot.send_message(message.chat.id, "📞 Contact the owner: @venomXcrazy")
+    bot.send_message(message.chat.id, "📞 Contact the owner: @Obito_uchiha_2507")
 
 # 💬 Command handler for /uptime. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁. ݁₊ ⊹ . ݁˖ . ݁
 @bot.message_handler(commands=['uptime'])
